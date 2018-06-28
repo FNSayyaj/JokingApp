@@ -37,8 +37,9 @@ public class MainFragment extends Fragment {
     public void launchDisplayJokeActivity(){
 
         if (!testFlag) {
+
             Intent intent = new Intent(getContext(), JokeActivity.class);
-            intent.putExtra("JOKE", loadedJoke);
+            intent.putExtra(getString(R.string.JOKE_KEY), loadedJoke);
             startActivity(intent);
         }
     }

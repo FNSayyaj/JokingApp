@@ -1,5 +1,6 @@
 package com.aboelfer.knightrider.ajokelib;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,9 +22,10 @@ public class JokeActivity extends AppCompatActivity {
         Intent intent = getIntent();
         if (intent != null){
 
-            receivedJoke = intent.getStringExtra("JOKE");
+            receivedJoke = intent.getStringExtra(getString(R.string.JOKE_KEY));
             textView.setText(receivedJoke);
 
         }
     }
+
 }

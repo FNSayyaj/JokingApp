@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-
 import com.aboelfer.knightrider.ajokelib.JokeActivity;
 import com.udacity.gradle.builditbigger.R;
 
@@ -40,7 +39,7 @@ public class MainFragment extends Fragment {
 
         if (!testFlag) {
             Intent intent = new Intent(getContext(), JokeActivity.class);
-            intent.putExtra("JOKE", loadedJoke);
+            intent.putExtra(getString(R.string.JOKE_KEY), loadedJoke);
             startActivity(intent);
         }
     }
